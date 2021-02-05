@@ -1,58 +1,134 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-  <info>
-    <name>Armorer</name>
-    <description>The Armorer from Tasha's Cauldron Everything</description>
-	<author url="https://dnd.wizards.com/products/tabletop-games/rpg-products/tashas-cauldron-everything">Tasha's Cauldron Everything</author>
-  </info>
-  <element name="Armorer" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_ARMORER">
-    <supports>Artificer Specialist</supports>
-    <description>
-      <p>An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.</p>
-      <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
-      <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" />
-    </description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" level="3" />
-      <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" level="3" />
-    </rules>
-  </element>
-  <element name="Tools of the Trade" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE">
-    <description>
-      <p>You gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
-    </description>
-    <sheet display="false" />
-    <rules>
-      <select type="Proficiency" name="Tools of the Trade" supports="ID_PROFICIENCY_TOOL|ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
-    </rules>
-  </element>
-  <element name="Armorer Spells" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS">
-    <description>
-      <p>You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.</p>
-      <table>
-        <thead>
-          <tr><td>Artificer Level</td><td>Spells</td></tr>
-        </thead>
-        <tr><td>3st</td><td><em>magic missile, thunderwave</em></td></tr>
-        <tr><td>5rd</td><td><em>mirror image, shatter</em></td></tr>
-        <tr><td>9th</td><td><em>hypnotic pattern, lightning bolt</em></td></tr>
-        <tr><td>13th</td><td><em>fire shield, greater invisibility</em></td></tr> 
-        <tr><td>17th</td><td><em>passwall, wall of force</em></td></tr>
-      </table>
-    </description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MISSILE" level="3" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" level="3" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="5" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" level="5" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" level="9" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="9" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="13" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" level="13" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" level="17" spellcasting="Artificer" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" level="17" spellcasting="Artificer" prepared="true" />
-    </rules>
-  </element>
+    <info>
+        <name>Armorer</name>
+        <description>The Armorer from Tasha's Cauldron Everything</description>
+        <author url="https://dnd.wizards.com/products/tabletop-games/rpg-products/tashas-cauldron-everything">Tasha's Cauldron Everything</author>
+    </info>
+    <element name="Armorer" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_ARMORER">
+        <supports>Artificer Specialist</supports>
+        <description>
+            <p>An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.</p>
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" level="3" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" level="3" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" level="3" />
+        </rules>
+    </element>
+    <element name="Tools of the Trade" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE">
+        <description>
+            <p>You gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Tools of the Trade" supports="ID_PROFICIENCY_TOOL|ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+        </rules>
+    </element>
+    <element name="Armorer Spells" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS">
+        <description>
+        <p>You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.</p>
+        <table>
+            <thead>
+            <tr><td>Artificer Level</td><td>Spells</td></tr>
+            </thead>
+            <tr><td>3st</td><td><em>magic missile, thunderwave</em></td></tr>
+            <tr><td>5rd</td><td><em>mirror image, shatter</em></td></tr>
+            <tr><td>9th</td><td><em>hypnotic pattern, lightning bolt</em></td></tr>
+            <tr><td>13th</td><td><em>fire shield, greater invisibility</em></td></tr> 
+            <tr><td>17th</td><td><em>passwall, wall of force</em></td></tr>
+        </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MISSILE" level="3" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" level="3" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="5" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SHATTER" level="5" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" level="9" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="9" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="13" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" level="13" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" level="17" spellcasting="Artificer" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" level="17" spellcasting="Artificer" prepared="true" />
+        </rules>
+    </element>
+    <element name="Arcane Armor" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR">
+        <description>
+        <p>Your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have smith's tools in hand.</p>
+        <p>You gain the following benefits while wearing this armor:</p>
+        <ul>
+            <li>If the armor normally has a Strength requirement, the arcane armor lacks this requirement for you.</li>
+            <li>You can use the arcane armor as a spellcasting focus for your artificer spells.</li>
+            <li>The armor attaches to you and can't be removed against your will. It also expands to cover your entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces any missing limbs, functioning identically to a limb it replaces.</li>
+            <li>You can doff or don the armor as an action. The armor continues to be Arcane Armor until you don another suit of armor or you die.</li>
+        </ul>
+        </description>
+        <sheet action="Action">
+            <description>
+                <p>As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have smith's tools in hand.</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Armor Model" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL">
+        <description>
+        <p>You can customize your Arcane Armor. When you do so, choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you special benefits while you wear it.</p>
+        <p>Each model includes a special weapon. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.</p>
+        <p>You can change the armor's model whenever you finish a short or long rest, provided you have smith's tools in hand.</p>
+        <ul>
+        <li><em>Guardian.</em> You design your armor to be in the front line of conflict. It has the following features:</li>
+        <li><em>Thunder Gauntlets.</em> Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals 1d8 thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else.</li>
+        <li><em>Defensive Field.</em> As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li>
+        </ul>
+        <p><em>Infiltrator.</em> You customize your armor for subtle undertakings. It has the following features:</p>
+        <ul>
+        <li><em>Lightning Launcher.</em> A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals 1d6 lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra 1d6 lightning damage to that target.</li>
+        <li><em>Powered Steps.</em> Your walking speed increases by 5 feet.</li>
+        <li><em>Dampening Field.</em> You have advantage on Dexterity (Stealth) checks. If the armor normally imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal.</li>
+        </ul>
+        </description>
+        <sheet display="false"/>
+        <rules>
+			<select type="Archetype Feature" name="Armor Model" supports="Armor Model" />
+		</rules>
+    </element>
+    <element name="Guardian" type="Archetype Feature" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL_GUARDIAN">
+        <supports>Armor Model</supports>
+        <description>
+			<p>You design your armor to be in the front line of conflict.</p>
+		</description>
+        <rules>
+			<grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL_GUARDIAN_THUNDER_GAUNTLETS" />
+			<grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL_GUARDIAN_DEFENSIVE_FIELD" />
+		</rules>
+    </element>
+    <element name="Thunder Gauntlets" type="Archetype Feature" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL_GUARDIAN_THUNDER_GAUNTLETS">
+        <description>
+			<p>Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals 1d8 thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else.</p>
+		</description>
+        <sheet action="Action">
+            <p>Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals 1d{{Thunder Gauntlets:dice}} thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else.</p>
+        </sheet>
+        <rules>
+            <stat name="Thunder Gauntlets:dice" value="8" bonus="Thunder Gauntlets" />
+		</rules>
+    </element>
+    <element name="Defensive Field" type="Archetype Feature" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL_GUARDIAN_DEFENSIVE_FIELD">
+        <description>
+			<p> As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+        <sheet action="Bonus Action" usage="{{Defensive Field:usage}}">
+            <p>you can gain {{lay on hands:hp pool}} temporary hit points, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </sheet>
+        <rules>
+            <stat name="Defensive Field:temp hp" value="level:artificer" />
+            <stat name="Defensive Field:usage" value="proficiency:full">
+		</rules>
+    </element>
 </elements>
