@@ -13,6 +13,9 @@
             <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" />
             <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" />
             <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODIFICATION" />
+            <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR" />
         </description>
         <sheet display="false" />
         <rules>
@@ -20,6 +23,9 @@
             <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" level="3" />
             <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" level="3" />
             <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" level="3" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK" level="5" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODIFICATION" level="9" />
+            <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR" level="15" />
         </rules>
     </element>
     <element name="Tools of the Trade" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE">
@@ -130,5 +136,38 @@
             <stat name="Defensive Field:temp hp" value="level:artificer" />
             <stat name="Defensive Field:usage" value="proficiency:full" />
 		</rules>
+    </element>
+    <element name="Extra Attack" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK">
+        <description>
+           <p>You can attack twice, rather than once, whenever you take the Attack action on your turn.</p>
+        </description>
+        <sheet action="Action">
+            <description>
+                <p>You can attack twice, rather than once, whenever you take the Attack action on your turn.</p>
+            </description>
+        </sheet>
+        <rules>
+            <stat name="extra attack:count" value="2" bonus="extra attack" />
+        </rules>
+    </element>
+    <element name="Armor Modifications" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODIFICATION">
+        <description>
+           <p>You learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>You learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor.</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Perfected Armor" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR">
+        <description>
+           <p>Your Arcane Armor gains additional benefits based on its model, as shown below.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Your Arcane Armor gains additional benefits based on its model, as shown below.</p>
+            </description>
+        </sheet>
     </element>
 </elements>
