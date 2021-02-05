@@ -128,7 +128,7 @@
         </sheet>
         <rules>
             <stat name="Defensive Field:temp hp" value="level:artificer" />
-            <stat name="Defensive Field:usage" value="proficiency:full">
+            <stat name="Defensive Field:usage" value="proficiency:full" />
 		</rules>
     </element>
 </elements>
