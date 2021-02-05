@@ -4,6 +4,9 @@
         <name>Armorer</name>
         <description>The Armorer from Tasha's Cauldron Everything</description>
         <author url="https://dnd.wizards.com/products/tabletop-games/rpg-products/tashas-cauldron-everything">Tasha's Cauldron Everything</author>
+        <update version="0.0.6">
+			<file name="artificer-armorer.xml" url="https://raw.githubusercontent.com/arijeetbaruah/myaurorahomebrew/master/arijeet/archetypes/artificer-armorer.xml" />
+		</update>
     </info>
     <element name="Armorer" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_ARMORER">
         <supports>Artificer Specialist</supports>
