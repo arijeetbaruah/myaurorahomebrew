@@ -10,20 +10,49 @@
     <description>
       <p>An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.</p>
       <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
+      <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" />
     </description>
     <sheet display="false" />
     <rules>
       <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" level="3" />
+      <grant type="Archetype Feature" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS" level="3" />
     </rules>
   </element>
   <element name="Tools of the Trade" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE">
     <description>
       <p>You gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
-      <div element="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
     </description>
     <sheet display="false" />
     <rules>
       <select type="Proficiency" name="Tools of the Trade" supports="ID_PROFICIENCY_TOOL|ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+    </rules>
+  </element>
+  <element name="Armorer Spells" type="Archetype" source="Tasha's Cauldron Everything" id="ID_WOTC_TCE_ARCHETYPE_FEATURE_ARMORER_ARMORERS_SPELLS">
+    <description>
+      <p>You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.</p>
+      <table>
+        <thead>
+          <tr><td>Artificer Level</td><td>Spells</td></tr>
+        </thead>
+        <tr><td>3st</td><td><em>magic missile, thunderwave</em></td></tr>
+        <tr><td>5rd</td><td><em>mirror image, shatter</em></td></tr>
+        <tr><td>9th</td><td><em>hypnotic pattern, lightning bolt</em></td></tr>
+        <tr><td>13th</td><td><em>fire shield, greater invisibility</em></td></tr> 
+        <tr><td>17th</td><td><em>passwall, wall of force</em></td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MISSILE" level="3" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" level="3" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="5" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" level="5" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" level="9" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="9" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="13" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" level="13" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" level="17" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" level="17" spellcasting="Artificer" prepared="true" />
     </rules>
   </element>
 </elements>
