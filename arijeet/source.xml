@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-	<info>
-		<update version="0.1.1">
-			<file name="source.xml" url="https://raw.githubusercontent.com/arijeetbaruah/myaurorahomebrew/master/arijeet/source.xml" />
-		</update>
-	</info>
-	<element name="Tasha's Cauldron Everything" type="Source" source="Core" id="ID_WOTC_SOURCE_TASHAS_CAULDRON_EVERYTHING">
-		<description>
-			<![CDATA[<p><strong>Explore a wealth of new rules options for both players and Dungeon Masters in this supplement for the world’s greatest roleplaying game.</strong></p><p>The beholder Xanathar—Waterdeep’s most infamous crime lord—is known to hoard information on friend and foe alike. The beholder catalogs lore about adventurers and ponders methods to thwart them. Its twisted mind imagines that it can eventually record everything!</p><p>Xanathar's Guide to Everything is the first major expansion for fifth edition Dungeons &amp; Dragons, offering new rules and story options:</p><ul><li>Over twenty-five new subclasses for the character classes in the Player’s Handbook, including the Cavalier for the fighter, the Circle of Dreams for the druid, the Horizon Walker for the ranger, the Inquisitive for the rogue, and many more.</li><li>Dozens of new spells, a collection of racial feats, and a system to give your character a randomized backstory.</li><li>A variety of tools that provide Dungeon Masters fresh ways to use traps, magic items, downtime activities, and more—all designed to enhance a D&amp;D campaign and push it in new directions.</li></ul><p>Amid all this expansion material, Xanathar offers bizarre observations about whatever its eyestalks happen to glimpse. Pray they don’t come to rest on you.</p><p><strong>Beauty and guile are in the eyes of the beholder!</strong></p>]]>
-		</description>
-		<setters>
-			<set name="abbreviation">XGTE</set>
-			<set name="url">https://dnd.wizards.com/products/tabletop-games/rpg-products/tashas-cauldron-everything</set>
-			<set name="image">https://media.dnd.wizards.com/styles/product_image_left_scale/public/images/product/Uq3hw0xJwb.png</set>
-			<set name="author" abbreviation="WOTC" url="http://dnd.wizards.com">Wizards of the Coast</set>
-			<set name="errata">https://media.wizards.com/2020/dnd/downloads/XGtE-Errata.pdf</set>
-			<set name="official">true</set>
-			<set name="supplement">true</set>
-			<set name="release">20171121</set>
-		</setters>
-	</element>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="source.xml" url="https://raw.githubusercontent.com/arijeetbaruah/myaurorahomebrew/master/arijeet/source.xml" />
+        </update>
+    </info>
+    
+    <element name="Tasha's Cauldron Everything" type="Source" source="Core" id="ID_author_source_SOURCE_TASHAS_CAULDRON_EVERYTHING">
+        <description>
+            <![CDATA[<p>Tasha's Cauldron of Everything offers a host of new options for Dungeons & Dragons, and our journey through those options is accompanied by the notes of the wizard Tasha. Creator of the spell Tasha's hideous laughter, Tasha's life is one of the most storied in the D&D multiverse. Raised by Baba Yaga, the Mother of Witches herself, Tasha adventured across the world of Greyhawk and became the friend and sometimes enemy of other famous adventurers, like Mordenkainen. In time, she ruled as the Witch Queen and later changed her name to Iggwilv—a figure of legend who is whispered about, feared, and admired.</p>]]>
+        </description>
+        <setters>
+            <set name="abbreviation">TCE</set>
+            <set name="url">https://dnd.wizards.com/products/tabletop-games/rpg-products/tashas-cauldron-everything</set>
+            <set name="image">https://media.dnd.wizards.com/styles/product_image_left_scale/public/images/product/Uq3hw0xJwb.png</set>
+            <set name="author" abbreviation="WOTC" url="http://dnd.wizards.com">Wizards of the Coast</set>
+            <set name="official">true</set>
+            <set name="supplement">false</set>
+            <set name="playtest">false</set>
+            <set name="third-party">false</set>
+            <set name="homebrew">false</set>
+            <set name="league">false</set>
+            <set name="release">20171122</set>
+        </setters>
+    </element>
+    
 </elements>

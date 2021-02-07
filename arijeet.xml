@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+    <info>
+        <name>Tasha's Cauldron Everything</name>
+        <update version="0.0.1">
+            <file name="arijeet.xml" url="https://raw.githubusercontent.com/arijeetbaruah/myaurorahomebrew/master/arijeet/source.xml" />
+        </update>
+    </info>
+    <files>
+        <file name="artificer-armorer.xml" url="https://raw.githubusercontent.com/arijeetbaruah/myaurorahomebrew/master/arijeet/archetypes/artificer-armorer.xml" />
+    </files>
+</index>
